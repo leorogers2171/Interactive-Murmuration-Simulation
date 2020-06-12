@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<!--Start of head-->
+<head> 
+    <meta charset="utf-8">
+    <title>Interactive Flocking Simulation</title>
+    <!--Included scripts-->
+    <script defer src="interactivity.js"></script>
+    <script defer src="TwoDimensionalVector.js"></script>
+    <script defer src="bird.js"></script>
+    <script defer src="canvas.js"></script>
+    <!--Included stylesheet-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_960,f_auto/DCTM_Penguin_UK_DK_AL526630_wkmzns.jpg">
+</head>
+<!--End of head-->
+    
+<!--Start of body-->
+<body>
+    <!--Wrap all body content-->
+    <div id="content-wrapper">
+        <!--Canvas declaration Properties: Height,Width,Style-->
+        <canvas height="768" id="my-canvas" style="background-color:black" width="1024">
+        Canvas is not supported
+        </canvas>
+        <!--End of canvas-->
+        
+        <!--Bottom navigation bar wrapper-->
+        <div id="horizontal-wrapper">
+            <!--Button container-->
+            <div class="button-container">
+                <button id="instructions-button" class="button">Instructions</button>
+            </div>
+            <!--Slider containers-->
+            <div id="slider-container-1" class ="slider-container">
+                <input type="range" min="0.5" max="5" value="1" class="slider" id="alignment-slider">  
+            </div>
+            <div id="slider-container-2" class ="slider-container">
+                <input type="range" min="0" max="5" value="1" class="slider" id="cohesion-slider">
+            </div>
+            <div id="slider-container-3" class ="slider-container">
+                <input type="range" min="0" max="5" value="0.7" class="slider" id="separation-slider">
+            </div>
+            <!--Button containers-->
+            <div class="button-container-2">
+                <button id= "add-birds-button"class="button">Add Birds</button>
+            </div>
+            <div class="button-container-2">
+                <button id= "remove-birds-button"class="button">Remove Birds</button>
+            </div>
+            <div class="button-container-2">
+                <button id= "rainbow-button"class="button">Rainbow Mode</button>
+            </div>
+        </div>
+        <!--End of bottom navigation bar wrapper-->
+        <!--The Modal -->
+        <!--Instruction modal wrapper-->
+        <div id="instructions-modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Instructions and Interactivity options:</h1>
+                <h2>Automatically add new birds:</h2>
+                    <p>To automatically add new birds into the simulation, simply hold down the mouse mover the canvas. Make sure to move the mouse around!</p>
+                <h2>Changing values:</h2>
+                    <p>Slider 1 - Change alignment</p>
+                    <p>Slider 2 - Change cohesion</p>
+                    <p>Slider 3 - Change separation</p>
+                <h2>Add/Remove birds</h2>
+                    <p>Add - To add new birds simply press the "Add Birds" button</p>
+                    <p>Remove - To remove birds simplt press the "Remove Birds" button</p>
+                    <h2>Rainbow mode</h2>
+                    <p>To change all the birds multicoloured press the "Rainbow Mode" button. Once finished press the button again to deactivate.</p>
+                <h2>Mute Sound</h2>
+                    <p>To mute the simulation simply press the mute button. Sounds will be reactivated again when you click on the canvas.</p>
+                    <h2>Reset Simulation</h2>
+                    <p>To reset the simulation back to its default format, press the reset button<p/>
+                    <p><br/>GitHub: <a href="https://github.com/leorogers2171/" target ="new">github.com/leorogers2171/</a></p>
+            </div>
+            <!--End of modal content-->
+        </div>
+        <!--End of instruction modal-->
+        
+        <!--Top navigation bar wrapper-->
+        <div id="horizontal-wrapper-top">
+            <!--Button containers-->
+            <div class="button-container-2-top">
+                <button id= "reset-button"class="button">Reset</button>
+            </div>
+            <div class="button-container-2-top">
+                <button id= "mute-button"class="button">Mute</button>
+            </div>
+            <!--Title container-->
+            <div id ="title-container">
+                <h1>Interactive Flocking Simulation</h1>
+            </div>
+        </div>
+        <!--End of top horizontal wrapper-->
+    </div>
+    <!--End of content wrappe-->
+</body>
+<!--End of body-->
+</html>
+<!--End of markup-->

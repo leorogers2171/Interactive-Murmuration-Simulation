@@ -1,0 +1,229 @@
+/*Stylesheet to control the general styling of the page*/
+
+/*Import Roboto from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/*Global CSS properties*/
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Global and local styling*/
+
+/*Paragraph properties */
+p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/*Modal content paragraph properties */
+.modal-content p {
+    margin-bottom: 5px;
+}
+
+/*Heading 1 properties*/
+h1 {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+/*Heading 2 properties*/
+h2 {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/*Modal content Heading 2 properties*/
+.modal-content h2{
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/*Heading 3 properties*/
+h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 28px;
+    background-color: red;
+    border: none;
+    color: white;
+}
+
+
+
+/*Body and content wrappers*/
+
+/*Page body default properties*/
+/*Using flex-box to centre content to 100vh*/
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    height: 100vh;
+}
+
+/*All page content wrapper styling*/
+/*Setting width to Canvas size*/
+/*Content justified centre*/
+#content-wrapper {
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: center;
+}
+
+/*Horiziontal wrapper above canvas*/
+/*Setting order to 1 to display before canvas*/
+#horizontal-wrapper-top {
+    order: 1;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+/*Setting canvas to be position 2*/
+canvas {
+    order: 2;
+}
+
+/*Setting order to be 3rd*/
+/*Setting width to canvas width*/
+/*Using flex-box*/
+#horizontal-wrapper {
+    order: 3;
+    margin-top: 10px;
+    display: flex;
+    width: 1024px;
+}
+
+
+/*Button and title containers*/
+/*Title container set to flex - grow 4 
+(take majority of top horizontal bar spacing)*/
+#title-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 4;
+}
+
+
+/*Button container class - 10% width*/
+.button-container {
+    width: 10%;
+}
+
+/*Button container 2 class - 13% width + margin*/
+.button-container-2 {
+    width: 13%;
+    margin-left: 10px;
+}
+
+/*Button container 2 class - 13% width + margin*/
+/*Align to the end (left most position)*/
+.button-container-2-top {
+    display: flex;
+    align-self: flex-end;
+    width: 13%;
+    margin-right: 10px;
+}
+
+/*Set rainbow button background gradient colour*/
+#rainbow-button {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+/*Slider container class*/
+/*Adding width, left + right margins*/
+.slider-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 15%;
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: red; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none;  /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    box-shadow: 0px 10px 47px 0px rgba(0,0,0,0.32);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    max-width: 950px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
